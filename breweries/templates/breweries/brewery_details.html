@@ -1,0 +1,19 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>{{ brewery.name }}</h1>
+  <p>Address: {{ brewery.address }}</p>
+  <p>Phone: {{ brewery.phone }}</p>
+  <p>Website: <a href="{{ brewery.website_url }}">{{ brewery.website_url }}</a></p>
+  <p>Rating: {{ brewery.rating }}</p>
+  <h2>Reviews</h2>
+  <ul>
+    {% for review in reviews %}
+      <li>
+        <strong>{{ review.user.username }}</strong>: {{ review.rating }}/5
+        <p>{{ review.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'add_review' brewery.id %}">Add a review</a>
+{% endblock %}
