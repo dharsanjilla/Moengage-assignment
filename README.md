@@ -93,4 +93,10 @@ Brewery Review is a Django-based web application that allows users to search for
 
 - Log in and add a review to any brewery by visiting its detail page.
 
+### Working Video 
 
+- https://youtu.be/QOIOUWla3vM?si=qKiD1TN1BLGLAn9X
+
+### Database
+
+- For database I have used SQLite dB
