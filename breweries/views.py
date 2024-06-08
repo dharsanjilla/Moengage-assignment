@@ -4,7 +4,7 @@ from .models import Brewery, Review
 from .forms import ReviewForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
-from django.urls import reverse  # Import the reverse function
+from django.urls import reverse  
 import requests
 import uuid
 
@@ -78,4 +78,8 @@ def signup(request):
         else:
             form = UserCreationForm()
         return render(request, 'signup.html', {'form': form})
-    # Create your views here.
+
+
+def login(request):
+        return render(request, 'login.html')
+
